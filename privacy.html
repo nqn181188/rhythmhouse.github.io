@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<title>CDs|DVDs|Magazines|Liveshows|Contest</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+<link rel="stylesheet" href="css/rhythmhouse.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/validateForm.js"></script>
+</head>
+<body>
+    <!-- Navbar toggle -->
+    <nav class="navbar navbar-expand-lg navbar-light bg01 mdfont ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartoggler1" aria-controls="navbartoggler1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbartoggler1">
+            <ul class="navbar-nav mr-auto mt-0 mt-lg-0 my-0">
+                <li class="nav-item">
+                    <a class="nav-link"  style="color: #07508E; font-weight: bolder;" href="index.html"><i class="fas fa-home"></i></span> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-login"  style="color: #07508E; font-weight: bolder;" href="login.html"><i class="fas fa-lock"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  style="color: #07508E; font-weight: bolder;" href="register.html"><i class="fas fa-thumbs-up"></i> Register</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #07508E; font-weight: bolder;" href="myaccount.html"><i class="fas fa-user"></i> My Account</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #07508E; font-weight: bolder;" href="contactus.html"><i class="fas fa-id-card"></i> Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #07508E; font-weight: bolder;" href="ourteam.html"><i class="fas fa-user-friends"></i> Our Team</a>
+                </li>
+            </ul>
+        </div>
+        
+        <p class="ml-0 mr-0 ml-auto my-auto text02 mx-auto freeship mdfont"><i class="fa fa-truck" aria-hidden="true"></i> FREE SHIPPING* on qualifying orders Rs.500+</p>
+    </nav>
+    <!-- Header -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-md-3 col-sm-12 col-12 bg-light">
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-fluid mx-auto my-auto d-block " src="image/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Search -->
+            <div class="col-md-5 col-sm-12 col-12 bg-light">
+                <div class="input-group pt-md-4 mt-md-5 pt-sm-4 mt-sm-5 pt-xs1 mt-xs-1">
+                    <div class="input-group-prepend">
+                        <div class="dropdown">
+                            <select type="button" class="btn bg02 dropdown-toggle text-white ml-2" data-toggle="dropdown">
+                                <option value="allproduct" class="mdfont bg-light text02">All Product</option>
+                                <option class="mdfont bg-light text02" value="CDs">CDs</option>
+                                <option class="mdfont bg-light text02" value="CDs">DVDs</option>
+                                <option class="mdfont bg-light text02" value="CDs">Magazines</option>
+                                <option class="mdfont bg-light text02" value="CDs">Tapes</option>
+                                <option class="mdfont bg-light text02" value="CDs">Live Shows</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <span class="input-group-text red lighten-3 mr-2" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                </div>
+            </div>
+            <!-- Shopping cart -->
+            <div class="col-md-4 col-sm-12 col-12 bg-light">
+                <div class="row bg01 text02 mx-2 mt-md-5 mt-4 mb-2">
+                    <div class="col-12">
+                        <p class="p-1 my-auto mdfont text-center mx-auto" ><i class="fa fa-envelope text02 pr-1"></i>   JOIN OUT EMAIL LIST</p>
+                    </div>
+                </div>
+            
+                <div class="row bg01 text02 mx-2" > 
+                            <p class="bg01 text02 my-auto mx-auto p-2"><i class="fa fa-shopping-cart text02 pr-1 my-auto"></i>Cart <span class="badge badge-pill badge-info total-count" ></span></p>
+                            <div id="shoppingCart" class="bg01 text02 p-2 mx-auto"><span class="total-count" ></span> items = Rs. <span class="total-cart" ></span></div>
+                </div>
+                <div class="row mx-2 pb-4">
+                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn w-100 bg02 text-white">SHOPPING CART</button>
+                    <!-- Shopping Cart Model -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title text02">Shopping Cart</h4>
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                </div>
+                            <!-- Modal body -->
+                                <div class="modal-body" style="border-top: 2px solid #07508E; border-bottom: 2px solid #07508E;">
+                                    <div class="container">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="bg01 text02 text-center">Item</th>
+                                                    <th class="bg01 text02 text-center">Qty</th>
+                                                    <th class="bg01 text02 text-center">Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="cart-content">
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2" class="bg01 text02 text-left">Total (Rs.)</td>
+                                                    <td class="bg01 text02 text-right"><span class="total-cart"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn bg-danger text-white" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-info clear-cart text-white" data-dismiss="modal">Clear Cart</button>
+                                    <button type="button" class="btn bg02 text-white">CHECK OUT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg01">
+        <div class="row p-2">
+            <p class="text02 mx-auto my-auto text-center">Become to membership with any purchases of Rs.200</p>
+        </div>
+        
+    </div>
+    <!-- Navbar SHOP BY DEPARTMENT -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg02">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-department" aria-controls="navbar-department" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-list" aria-hidden="true"></i> <p class="text-white my-auto" style="display: inline; ">CATEGORIES</p>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-department">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown active mx-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CDs
+                    </a>
+                    <div class="dropdown-menu mt-2 bg-light" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" style="color: #07508E;" href="cds.html">Music</a>
+                        <a class="dropdown-item" style="color: #07508E;"href="cds-poemsforkid.html">Poems for kid</a>
+                        <div class="dropdown-divider" style="border: 0.5px solid#07508E;"></div>
+                        <a class="dropdown-item"style="color: #07508E;" href="cds-bollywood.html">Bollywood</a>
+                        <a class="dropdown-item"style="color: #07508E;" href="cds-pop.html">Pop</a>
+                        <a class="dropdown-item"style="color: #07508E;" href="cds-rock.html">Rock</a>
+                        <a class="dropdown-item"style="color: #07508E;" href="cds-christmas.html">Christmas</a>
+                        <a class="dropdown-item"style="color: #07508E;" href="cds-topsellers.html">Top sellers</a>
+                        <a class="dropdown-item"style="color: #07508E;" href="cds-newreleases.html">NEW RELEASES</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active mx-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    DVDs
+                    </a>
+                    <div class="dropdown-menu mt-2 bg-light" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item " style="color: #07508E;" href="dvd-movie.html">Movie</a>
+                        <a class="dropdown-item" style="color: #07508E;"   href="dvd-music.html">Music</a>
+                        <div class="dropdown-divider" style="border: 0.5px solid#07508E;" ></div>
+                        <a class="dropdown-item" style="color: #07508E;" href="dvd-topsellers.html">Top sellers</a>
+                        <a class="dropdown-item"style="color: #07508E;" href="dvd-newreleases.html">NEW RELEASES</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-5">
+                    <a class="nav-link active" href="magezines.html">Magezines</a>
+                </li>
+                <li class="nav-item active mx-5">
+                    <a class="nav-link" href="liveshows.html">Liveshows</a>
+                </li>
+                <li class="nav-item active mx-5">
+                    <a class="nav-link" href="contests.html">Contests</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    
+<!-- ******************** -->
+    <div class="container">
+        <h5 class="text02 text-center my-5"><i class="fa fa-id-card"></i> PRIVACY POLICY</h5>
+        <div class="border01 rounder01 m-1 p-0 mdfont">
+            <p class=" text02 bg05 p-2" style="border-bottom: 1px solid #bce3ff;" ></i> COMMITMENT TO YOUR PRIVACY</p>
+            <p class="text03 px-5 py-0" style="text-align: justify;"> At <span class="text02"> Rhythm House</span> 
+                , your privacy is important to us. We understand that you entrust us with the management of your data. 
+                Please know that we protect your privacy. Rhythm House may share or sell personal information about you 
+                to or with any person or organization as provided in this Privacy Policy or as may be required by law 
+                or court order. This Privacy Policy describes the standards that we adhere to in handling information about you.
+            </p>
+            <p class="text03 px-5 py-0" style="text-align: justify;">The <span class="text02">www.rhythmhouse.com</span>   website (the "Website") 
+                is provided to You by Aptech House or any of its related, affiliated and/or subsidiary companies (individually and collectively, 
+                "RhythmHouse," "We," "Our" or "Us"), and the following Privacy Policy applies to all of the services offered by Rhythm House 
+                in connection with the Website as well as the Rhythm House pages on Facebook, Twitter and Google. For convenience, 
+                the words "user," "You" and "Your" as used in this Privacy Policy refer to users of the Website.
+            </p>
+            
+            <p class="text03 px-5 py-0" style="text-align: justify;"><span class="text02">Rhythm House</span>  recognizes that Your privacy and the protection of 
+                Your personal information are important to You, and therefore, has adopted this Privacy Policy. 
+                This Privacy Policy describes Rhythm House's privacy practices and how Rhythm House treats the personal information that it collects from 
+                You when You use the use the Website, including any personal information You provide when You conduct business with DeepDiscount on or through
+                 the Website or use RhythmHouse's services that are provided on or through the Website.
+            </p>
+            <p class="text03 px-5 py-0" style="text-align: justify;"> For the purposes of this Privacy Policy, 
+                "Personal Information" is information that (i) You provide to Rhythm House and (ii) personally identifies You. 
+                Personal Information includes Your name, email and postal address, billing, credit card and banking information, 
+                telephone numbers and other data that can be used to personally identify or contact You.
+            </p>
+            <p class=" text02 bg05 p-2" style="border-bottom: 1px solid #bce3ff;" ></i> COMMITMENT TO YOUR PRIVACY</p>
+            <p class="text03 px-5 py-0" style="text-align: justify;">The Personal Information that the DeepDiscount may collect from You and/or manage includes, 
+                but is not limited to:
+            </p>
+            <ul class="ml-5 py-0">
+                <li class="text03 py-0">
+                    Contact information such as email and postal addresses and telephone numbers;
+                </li>
+                <li class="text03 py-0">
+                    Credit card and banking information; and
+                </li>
+                <li class="text03 py-0">
+                    Purchasing activities
+                </li>
+            </ul>
+            <p class="text03 px-5 py-0" style="text-align: justify;">Except as otherwise provided in this Privacy Policy, RhythmHouse will 
+                store all information provided by You in its secure data servers during the time You use RhythmHouse products and/or services. 
+                RhythmHouse uses commercially reasonable efforts to ensure that such information is secure and to protect against its loss, 
+                misuses, and alteration of the information under DeepDiscount's direct control. Notwithstanding the foregoing, RhythmHouse 
+                cannot guarantee that its security measures will prevent its computers from illegal or otherwise unauthorized access. 
+                For the avoidance of doubt, RhythmHouse will not retain Your credit card or other banking information without Your separate, 
+                prior written authorization.
+            </p>
+            <p class=" text02 bg05 p-2" style="border-bottom: 1px solid #bce3ff;" ></i> TECHNICAL INFORMATION</p>
+            <p class="text03 px-5 py-0" style="text-align: justify;">We may collect and track certain technical information to ensure that 
+                Your experiences on the Website and purchase of goods and services offered on the Website, including but not limited to the 
+                following:
+            </p>
+            <ul class="ml-5 py-0">
+                <li class="text03 py-0 pr-5" style="text-align: justify;" >
+                    <strong>Cookies </strong> - A cookie is a small file stored on a user's computer that contains information about the user. We may use either session ID cookies (which terminate once a browser is closed) or persistent cookies (which are small text files stored on a user's hard drive for an extended period of time). Cookies allow Us to see how and when You use our sites, but they cannot be used to track personal information such as email address or phone number. Cookies also allow Us to store the personal preferences that You set during each visit to our sites which can speed up Your future visits. These cookies cannot damage a user's files and cannot read information from a user's hard drive.
+                </li>
+                <li class="text03 py-0 pr-5" style="text-align: justify;" >
+                    <strong>Log files</strong> - RhythmHouse may use log files to track how our sites are being accesses and used. Log files track anonymous user information such as IP addresses, browser types, Internet service providers, referring and exit pages, platform type, date and time stamps, and number of clicks to, from, and within our sites.
+                </li>
+                <li class="text03 py-0 pr-5" style="text-align: justify;">
+                    <strong>Information from Banner Ads</strong> - If You arrive at RhythmHouse's website(s) through a banner ad or other Affiliate referral device, RhythmHouse may track where You arrived from, as well as clicks that might have impacted our servers.
+                </li>
+                <li class="text03 py-0 pr-5" style="text-align: justify;">
+                    We may use clear GIF Tracking Pixels to track user movement through our web sites for aggregated site traffic measuring. In addition, some Affiliates may set such tracking pixels on our web site pages to track completed forms and requests referred by their web sites.
+                </li>
+            </ul>
+            <p class="text03 px-5 py-0" style="text-align: justify;">Please be assured that no Personal Information is collected from or stored in these cookies, files or tracking devices.
+            </p>
+            <p class=" text02 bg05 p-2" style="border-bottom: 1px solid #bce3ff;" ></i> "CONTACT US" INFORMATION            </p>
+            <p class="text03 px-5 py-0" style="text-align: justify;">If You communicate with Us through the "Contact Us", We may ask You for Personal Information such as Your name, 
+                email address, or phone number. If You are contacting Us with respect to a customer service issue, we may use the Personal 
+                Information that You provide to contact You in order to resolve that customer service issue. If necessary to resolve 
+                Your customer service issue, the Personal Information that You provide to Us may be shared with third parties in order 
+                to resolve the issue. Please understand that by providing such information in connection with a customer service issue, 
+                You are giving Your express consent for Us to use Your Personal Information to contact and communicate with You regarding
+                 that customer service issue.
+            </p>       
+        </div>
+    </div>
+
+
+<!-- FOOTER -->
+<footer class="page-footer bg01 mt-5">
+    <div class="container-fluid">
+        <div class="row mt-md-5 mt-sm-3 mt-xs-2 mb-0">
+            <div class="col-md-3 col-sm-3 col-12 mt-md-3 mt-sm-3 mt-2 mb-3 pt-1">
+                <a href="javascript:" class="footerInfo-toggle"><h7 class="footerInfo text02 mx-auto d-block text-center"> <i class="fa fa-info-circle" aria-hidden="true"></i> INFOMATION</h7></a>
+                <div class="footerInfo-item">
+                <a href="aboutus.html" class="footerInfo-link mx-auto d-block text-center text03"><i class="fa fa-book" aria-hidden="true"></i> About Us</a>
+                <a href="contactus.html" class="footerAcc-link mx-auto d-block text-center text03"><i class="fas fa-id-card"></i> Contact Us</a>
+                <a href="privacy.html" class="footerInfo-link mx-auto d-block text-center text03"><i class="fa fa-book" aria-hidden="true"></i>Privacy Policy</a>
+                <a href="terms.html" class="footerInfo-link mx-auto d-block text-center text03"><i class="fa fa-book" aria-hidden="true"></i>Terms of Uses</a>
+                </div>
+                
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-12 mt-md-3 mt-sm-3 mt-2 mb-3 pt-1">
+                <a href="javascript:" class="footerAcc-toggle"><h7 class="footerAcc text02 mx-auto d-block text-center"><i class="fas fa-user-circle"></i> MY ACCOUNT</h7></a>
+                <div class="footerAcc-item">
+                    <a href="index.html" class="footerAcc-link mx-auto d-block text-center text03"><i class="fa fa-home" aria-hidden="true"></i>  Home</a>
+                    <a href="login.html" class="footerAcc-link mx-auto d-block text-center text03"><i class="fa fa-lock" aria-hidden="true"></i>  Login</a>
+                    <a href="register.html" class="footerAcc-link mx-auto d-block text-center text03"><i class="fa fa-thumbs-up" aria-hidden="true"></i>  Register</a>
+                    <a href="myaccount.html" class="footerAcc-link mx-auto d-block text-center text03"><i class="fas fa-user"></i> My Account</a>
+                </div>
+                
+            </div>
+            <div class="col-md-3 col-sm-3 col-12 mt-md-3 mt-sm-3 mt-2 mb-3 pt-1">
+                <a href="javascript:" class="footerCatelog-toggle"><h7 class="footerCatelog text02 mx-auto d-block text-center"><i class="fas fa-list"></i> CATEGORIES</h7></a>
+                <div class="footerCatelog-item">
+                <a href="cds.html" class="footerCatelog-link mx-auto d-block text-center text03"><i class="fa fa-music"></i> CDs</a>
+                <a href="dvds.html" class="footerCatelog-link mx-auto d-block text-center text03"><i class="fa fa-film" aria-hidden="true"></i>  DVDs</a>
+                <a href="magezines.html" class="footerCatelog-link mx-auto d-block text-center text03"><i class="fa fa-book-reader" aria-hidden="true"></i>  Magezines</a>
+                <a href="liveshows.html" class="footerCatelog-link mx-auto d-block text-center text03"><i class="fas fa-heartbeat"></i> Live Shows</a>
+                <a href="contests.html" class="footerCatelog-link mx-auto d-block text-center text03"><i class="fas fa-star"></i> Contest</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-12 mt-md-3 mt-sm-3 mt-2 mb-3 pt-1">
+                <h7 class="footerCatelog text02 mx-auto d-block text-center">HOW ARE WE DOING ?</h7>
+                <p class="text03 text-center mx-auto d-block"><i class="fa fa-comment" aria-hidden="true"></i> Tell us about your rhythmhouse.com experience.</p>
+                <h7 class="footerCatelog text02 mx-auto d-block text-center">WE'RE SOCIAL</h7>
+                <p class="text03 text-center mx-auto d-block">
+                    <i class="fab fa-facebook fa-lg px-2 py-2" aria-hidden="true"></i>
+                    <i class="fab fa-instagram fa-lg px-2 py-2" aria-hidden="true"></i>
+                    <i class="fab fa-twitter fa-lg px-2 py-2" aria-hidden="true"></i>
+                    <i class="fab fa-pinterest fa-lg px-2 py-2" aria-hidden="true"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <button type="button" data-toggle="modal" data-target="#myModal" class="icon-cart text02"><i class="fas fa-shopping-cart" style="font-size: 250%;"></i><span class="badge badge-pill badge-danger mb-5 total-count cart-badge" style="font-size: 90%;"></span></button>
+    <a href="javascript:" onclick="scrolltop()" id="scroll-to-top" class="scroll-to-top text02"><i class="fa fa-arrow-circle-up" aria-hidden="true" style="font-size: 250%;"></i></a>
+</footer>
+    
+
+
+
+    <script src="js/rhythmhouse.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    
+</body>
+</html>
